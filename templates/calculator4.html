@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="row align-items-start">
+        <div class="col-8">
+            <h3>Step 4</h3>
+            <p>Your final truck configuration is shown to the right.</p>
+
+            {{ map | safe }}
+
+        </div>
+        <div class="col-4">
+            <h3>Your truck configuration:</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Axle Number</th>
+                        <th scope="col">Axle Load</th>
+                        <th scope="col">Axle spacing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in range(0, result1["axles"] | int) %}
+                    <tr>
+                        <td>{{ truck['Axle number'][i] }}</td>
+                        <td>{{ truck["Load"][i] }}</td>
+                        <td>{{ truck["Axle spacing"][i] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

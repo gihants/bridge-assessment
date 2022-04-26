@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="row align-items-start">
+        <div class="col-8">
+            <h3>Step 2</h3>
+            <p class="lead">You selected {{ result["axles"] }} axles.</p>
+            <p>Please input the loads on each axle.</p>
+            <form method="POST">
+                <div class="row align-items-start">
+                    <div class="col-4">
+                        {% if result["axles"] | int >= 1 %}
+                            <div class="form-group">
+                                {{ form2.axle1.label(class="form-label") }} <br>
+                                {{ form2.axle1(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 2 %}
+                            <div class="form-group">
+                                {{ form2.axle2.label(class="form-label") }} <br>
+                                {{ form2.axle2(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 3 %}
+                            <div class="form-group">
+                                {{ form2.axle3.label(class="form-label") }} <br>
+                                {{ form2.axle3(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 4 %}
+                            <div class="form-group">
+                                {{ form2.axle4.label(class="form-label") }} <br>
+                                {{ form2.axle4(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 5 %}
+                            <div class="form-group">
+                                {{ form2.axle5.label(class="form-label") }} <br>
+                                {{ form2.axle5(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int < 6 %}
+                            <br>
+                            {{ form2.submit(class="btn btn-primary") }}
+                        {% endif %}
+                    </div>
+                    <div class="col-4">
+                        {% if result["axles"] | int >= 6 %}
+                            <div class="form-group">
+                                {{ form2.axle6.label(class="form-label") }} <br>
+                                {{ form2.axle6(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 7 %}
+                            <div class="form-group">
+                                {{ form2.axle7.label(class="form-label") }} <br>
+                                {{ form2.axle7(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 8 %}
+                            <div class="form-group">
+                                {{ form2.axle8.label(class="form-label") }} <br>
+                                {{ form2.axle8(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 9 %}
+                            <div class="form-group">
+                                {{ form2.axle9.label(class="form-label") }} <br>
+                                {{ form2.axle9(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 10 %}
+                            <div class="form-group">
+                                {{ form2.axle10.label(class="form-label") }} <br>
+                                {{ form2.axle10(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int > 5 and result["axles"] | int <= 10 %}
+                            <br>
+                            {{ form2.submit(class="btn btn-primary") }}
+                        {% endif %}
+                    </div>
+                    <div class="col-4">
+                        {% if result["axles"] | int >= 11 %}
+                            <div class="form-group">
+                                {{ form2.axle11.label(class="form-label") }} <br>
+                                {{ form2.axle11(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 12 %}
+                            <div class="form-group">
+                                {{ form2.axle12.label(class="form-label") }} <br>
+                                {{ form2.axle12(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 13 %}
+                            <div class="form-group">
+                                {{ form2.axle13.label(class="form-label") }} <br>
+                                {{ form2.axle13(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 14 %}
+                            <div class="form-group">
+                                {{ form2.axle14.label(class="form-label") }} <br>
+                                {{ form2.axle14(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int >= 15 %}
+                            <div class="form-group">
+                                {{ form2.axle15.label(class="form-label") }} <br>
+                                {{ form2.axle15(class="form-control") }}
+                            </div>
+                        {% endif %}
+                        {% if result["axles"] | int > 10 %}
+                            <br>
+                            {{ form2.submit(class="btn btn-primary") }}
+                        {% endif %}
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-4">
+            <center>
+                <figure class="figure">
+                    <img src="/static/img/opera.jpeg" class="figure-img img-fluid rounded" style="width:auto" alt="Vehicles on the Harbour Bridge shortly after opening.">
+                    <figcaption class="figure-caption">
+                        The Sydney Opera House under construction in 1966 with the Harbour Bridge in the background.
+                    </figcaption>
+                </figure>
+            </center>
+        </div>
+    </div>
+
+{% endblock %}

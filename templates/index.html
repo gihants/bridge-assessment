@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <br>
+    <div class="row align-items-start">
+        <div class="col-8">
+            <h1>Bridge Assessment Calculator</h1>
+            <br>
+            <h3>Step 1</h3>
+            <p> Welcome to the Transport for NSW Bridge Assessment Calculator. Use this calculator to exclude bridges on your route which your vehicle is unsuitable to drive on.</p>
+            <p>To get started, please input the number of axles your truck has below.</p>
+            
+            <form method="POST">
+                <div class="form-group">
+                    {{ form1.axles.label(class="form-label") }} <br>
+                    {{ form1.axles(class="form-control") }} <br>
+                    {{ form1.submit(class="btn btn-primary") }}
+                </div>
+            </form>
+            
+        </div>
+        <div class="col-4">
+            <center>
+            <figure class="figure">
+                <img src="/static/img/bridge7.jpeg" class="figure-img img-fluid rounded" style="width:auto" alt="Vehicles on the Harbour Bridge shortly after opening.">
+                <figcaption class="figure-caption">
+                    Some of the first vehicles to cross the Sydney Harbour Bridge (March 20, 1932)
+                </figcaption>
+            </figure>
+            </center>
+        </div>
+    </div>
+
+{% endblock %}

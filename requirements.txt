@@ -1,0 +1,6 @@
+pandas
+flask-wtf
+scipy
+folium
+pyyaml
+geopandas
